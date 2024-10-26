@@ -1,0 +1,40 @@
+:root {
+    --primary: #3F72AF;
+    --primary-light: #5488c7;
+    --secondary: #00ADB5;
+    --secondary-light: #00c2cc;
+    --dark: #393E46;
+    --dark-light: #4d535d;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+}
+
+.categories {
+    padding: 5rem 5%;
+    background: var(--gray);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.category-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}

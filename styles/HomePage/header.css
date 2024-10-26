@@ -1,0 +1,49 @@
+:root {
+    --primary: #3F72AF;
+    --primary-light: #5488c7;
+    --secondary: #00ADB5;
+    --secondary-light: #00c2cc;
+    --dark: #393E46;
+    --dark-light: #4d535d;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+}
+
+header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
