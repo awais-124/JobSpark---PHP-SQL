@@ -17,6 +17,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 100;
+    opacity: 0.85;
 }
 
 nav {
