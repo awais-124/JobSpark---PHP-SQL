@@ -1,0 +1,32 @@
+:root {
+    --white:#FFF;
+    --card-back:#f3f4f6;
+    --card-text:#9ca3af;
+}
+/* Featured Companies */
+.companies {
+    padding: 64px 0;
+    background: white;
+}
+
+.companies-grid {
+    display: grid;
+    /* min width of each card is 150px and maximum is 1 fraction of available space
+       If there is extra space it will distributed among columns */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 24px;
+}
+
+.company-logo {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-text);
+}
+
+.company-logo img {
+    height: 110px;
+    width: 110px;
+    cursor: pointer;
+}

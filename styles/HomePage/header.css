@@ -17,7 +17,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 100;
-    opacity: 0.85;
 }
 
 nav {
@@ -33,6 +32,11 @@ nav {
     text-decoration: none;
 }
 
+.logo img{
+    height: 50px;
+    width: 200px;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -43,8 +47,11 @@ nav {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    text-shadow: 0 2px 2px #81818179;
+    border-bottom: 2px solid var(--white);
+    padding: 3px 0;
 }
 
 .nav-links a:hover {
-    color: var(--primary);
+    border-bottom: 1px solid #818181;
 }

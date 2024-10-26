@@ -10,7 +10,7 @@
 }
 
 footer {
-    background: var(--dark);
+    background: var(--dark-light);
     color: var(--white);
     padding: 3rem 5%;
     text-align: center;

@@ -1,7 +1,18 @@
+:root {
+    --dark: #393E46;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 30px;
+}
+
 .section-title {
     text-align: center;
     color: var(--dark);
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
+    font-size: 30px;
 }
 
 /* media queries for responsive */
@@ -48,5 +59,29 @@
 
     .search-btn {
         width: 100%;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Search bar styling for very small sized devices */
+@media (max-width: 640px) {
+    .search-box {
+        padding: 0.5rem;
+    }
+    
+    .search-form {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .input-wrapper, 
+    .search-btn {
+        width: 100%;
+    }
+    
+    .search-btn {
+        padding: 0.8rem;
     }
 }

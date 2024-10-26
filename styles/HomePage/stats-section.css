@@ -1,0 +1,28 @@
+:root {
+    --primary: #3F72AF;
+    --dark-gray:#474747;
+    --back: #f9fafb;
+}
+
+.statistics {
+    background: var(--back);
+    padding: 48px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: var(--dark-gray);
+}

@@ -1,62 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./styles/generalStyles.css">
-    <link rel="stylesheet" href="./styles/HomePage/common-styles.css">
-    <link rel="stylesheet" href="./styles/HomePage/header.css">
-    <link rel="stylesheet" href="./styles/HomePage/hero-section.css">
-    <link rel="stylesheet" href="./styles/HomePage/categories-section.css">
-    <link rel="stylesheet" href="./styles/HomePage/popular-jobs-section.css">
-    <link rel="stylesheet" href="./styles/HomePage/companies-section.css">
-    <link rel="stylesheet" href="./styles/HomePage/stats-section.css">
-    <link rel="stylesheet" href="./styles/HomePage/footer.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobSpark - Your Dream Jobs</title>
+    <title>Job Portal - Pakistan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #2563eb;
+            color: white;
+            padding: 64px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .search-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .search-btn {
+            background: #1d4ed8;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background: #1e40af;
+        }
+
+        /* Job Categories */
+        .categories {
+            padding: 64px 0;
+            background: #f9fafb;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 32px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .category-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .category-card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .category-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .category-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .job-count {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        /* Featured Jobs */
+        .featured-jobs {
+            padding: 64px 0;
+            background: white;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .job-card {
+            border: 1px solid #e5e7eb;
+            padding: 24px;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+
+        .job-card:hover {
+            border-color: #2563eb;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .job-details {
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .view-job {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        /* Statistics */
+        .statistics {
+            background: #f9fafb;
+            padding: 48px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #6b7280;
+        }
+
+        /* Featured Companies */
+        .companies {
+            padding: 64px 0;
+            background: white;
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 24px;
+        }
+
+        .company-logo {
+            background: #f3f4f6;
+            height: 100px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .search-box {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .search-btn {
+                width: 100%;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
-            <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Find Jobs</a>
-                <a href="#">Profile</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Employer</a>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Find your dream job now</h1>
-            <h6>Kickstart your career journey with JobSpark</h6>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Find Your Dream Job in Pakistan</h1>
             <div class="search-box">
-                <form class="search-form">
-                    <div class="input-wrapper">
-                        <img src="./assets/icons/search.png" alt="search-icon" class="search-icon">
-                        <input type="text" placeholder="Search jobs, companies, or keywords" class="search-input">
-                    </div>
-                    <button type="submit" class="search-btn">Search</button>
-                </form>
+                <input type="text" placeholder="Search jobs, companies, or keywords">
+                <button class="search-btn">Search</button>
             </div>
         </div>
-        <div class="image-animation-container">
-            <div class="rotating-circle">
-                <div class="image-container">
-                    <img src="./assets/images/hiring.png" alt="Job Image 1">
-                </div>
-                <div class="image-container">
-                    <img src="./assets/images/laptop.png" alt="Job Image 2">
-                </div>
-                <div class="image-container">
-                    <img src="./assets/images/apply.png" alt="Job Image 3">
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Job Categories -->
     <section class="categories">
@@ -195,39 +369,14 @@
         <div class="container">
             <h2 class="section-title">Top Companies Hiring</h2>
             <div class="companies-grid">
-                <div class="company-logo">
-                    <img title="AMAZON" src="./assets/logos/amazon-prime-video.png" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="DISCORD" src="./assets/logos/discord.png" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="GITHUB" src="./assets/logos/github.png" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="HBO" src="./assets/logos/hbo-max.png" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="RIOT" src="./assets/logos/riot-games.png" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="DISNEY" src="./assets/logos/disney-plus.png" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="TELEGRAM" src="./assets/logos/telegram.jpg" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="REDDIT" src="./assets/logos/reddit.jpg" alt="company-logo">
-                </div>
-                 <div class="company-logo">
-                    <img title="TIKTOK" src="./assets/logos/tiktok.jpg" alt="company-logo">
-                </div>
+                <div class="company-logo">Company Logo</div>
+                <div class="company-logo">Company Logo</div>
+                <div class="company-logo">Company Logo</div>
+                <div class="company-logo">Company Logo</div>
+                <div class="company-logo">Company Logo</div>
+                <div class="company-logo">Company Logo</div>
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 JobSpark. All rights reserved.</p>
-    </footer>
 </body>
 </html>
