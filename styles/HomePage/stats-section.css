@@ -9,10 +9,23 @@
     padding: 48px 0;
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.stats-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
+}
+
+@media (max-width: 700px) {
+    .stats-flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.stat {
+    flex: 1;
+    min-width: 200px;
     text-align: center;
 }
 

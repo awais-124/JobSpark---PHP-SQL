@@ -14,7 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobSpark - Your Dream Jobs</title>
 </head>
+
+<!--
+    The styles of each section is in different file mentioned in comments
+    and common styles and responsive styles are in common-styles.css in ./styles/HomePage/
+-->
+
 <body>
+    <!-- Header section with Navbar - STYLES in header.css-->
     <header>
         <nav>
             <a href="#" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
@@ -28,7 +35,7 @@
             </div>
         </nav>
     </header>
-
+    <!-- Hero Section with search bar - STYLES in hero-section.css -->
     <section class="hero">
         <div class="hero-content">
             <h1>Find your dream job now</h1>
@@ -58,12 +65,11 @@
         </div>
     </section>
 
-    <!-- Job Categories -->
+    <!-- Popular Job Categories Sections  - STYLES in categories-section.css-->
     <section class="categories">
         <div class="container">
             <h2 class="section-title">Popular Job Categories</h2>
             <div class="categories-grid">
-                <!-- Category Cards -->
                 <div class="category-card">
                     <div class="category-info">
                         <div>
@@ -140,40 +146,40 @@
         </div>
     </section>
 
-    <!-- Featured Jobs -->
+    <!-- Featured Jobs  - STYLES in popular-jobs-sections.css-->
     <section class="featured-jobs">
         <div class="container">
             <h2 class="section-title">Featured Jobs</h2>
             <div class="jobs-grid">
                 <div class="job-card">
                     <h3 class="job-title">Senior Software Engineer</h3>
-                    <div class="job-details">Systems Limited</div>
-                    <div class="job-details">Lahore</div>
-                    <div class="job-details">Rs. 150,000 - 250,000 • Full-time</div>
-                    <a href="#" class="view-job">View Details →</a>
-                </div>
-                <div class="job-card">
-                    <h3 class="job-title">Bank Manager</h3>
-                    <div class="job-details">HBL</div>
-                    <div class="job-details">Karachi</div>
-                    <div class="job-details">Rs. 120,000 - 180,000 • Full-time</div>
-                    <a href="#" class="view-job">View Details →</a>
-                </div>
-                <div class="job-card">
-                    <h3 class="job-title">Medical Officer</h3>
-                    <div class="job-details">Shaukat Khanum Hospital</div>
+                    <div class="job-details">Devsinc</div>
                     <div class="job-details">Islamabad</div>
-                    <div class="job-details">Rs. 100,000 - 150,000 • Full-time</div>
+                    <div class="job-details">Rs. 350,000 - 450,000 • Full-time</div>
+                    <a href="#" class="view-job">View Details →</a>
+                </div>
+                <div class="job-card">
+                    <h3 class="job-title">MERN Developer</h3>
+                    <div class="job-details">Pixasart Studios</div>
+                    <div class="job-details">Lahore</div>
+                    <div class="job-details">Rs. 220,000 - 300,000 • Full-time</div>
+                    <a href="#" class="view-job">View Details →</a>
+                </div>
+                <div class="job-card">
+                    <h3 class="job-title">Data Scientist</h3>
+                    <div class="job-details">Systems Limited</div>
+                    <div class="job-details">Islamabad</div>
+                    <div class="job-details">Rs. 400,000 - 550,000 • Full-time</div>
                     <a href="#" class="view-job">View Details →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Statistics -->
+    <!-- Statistics  - STYLES in stats-section.css-->
     <section class="statistics">
         <div class="container">
-            <div class="stats-grid">
+            <div class="stats-flex">
                 <div class="stat">
                     <div class="stat-number">10,000+</div>
                     <div class="stat-label">Active Jobs</div>
@@ -190,7 +196,7 @@
         </div>
     </section>
 
-    <!-- Featured Companies -->
+    <!-- Featured Companies  - STYLES in companies-section.css-->
     <section class="companies">
         <div class="container">
             <h2 class="section-title">Top Companies Hiring</h2>
@@ -226,6 +232,7 @@
         </div>
     </section>
 
+    <!-- Footer Section  - STYLES in footer.css -->
     <footer>
         <p>&copy; 2024 JobSpark. All rights reserved.</p>
     </footer>
