@@ -1,32 +1,26 @@
 :root {
     --white: #ffffff;
-    --back:#e4e4e4;
-    --black:#000000;
+    --back: #ecf1f1;
+    --black: #000;
+    --dark: #393E46;
 }
 
-.form-fields {
+.form-fields-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+    width: 95%;
+    gap: 50px;
+}
+
+.input-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.btn-login {
-    background-color: var(--black);
-    color: var(--white);
-    text-transform: uppercase;
-    border-radius: 32px;
-    padding: 12px 50px;
-    border: none;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.btn-login:hover {
-    opacity: 0.9;
-    cursor: pointer;
+    gap: 30px;
+    padding: 10px;
 }
 
 .input-group {
@@ -55,7 +49,6 @@
     transition: all 0.3s ease;
 }
 
-
 .input-group input:focus,
 .input-group input:not(:placeholder-shown) {
     border-color: var(--black);
@@ -68,3 +61,20 @@
     color: var(--black);
 }
 
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--black);
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: var(--black);
+}

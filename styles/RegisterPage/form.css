@@ -1,0 +1,94 @@
+:root {
+    --white: #ffffff;
+    --back: #ecf1f1;
+    --black: #000;
+    --dark: #393E46;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--back);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.form-container {
+    width: 85%;
+    height: 70%;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+}
+
+.register-form-heading {
+    color: var(--black);
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.image-column {
+    width: 33.33%;
+    background-image: url('../../assets/images/signup-back.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.full-width-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40%;
+    width: 90%;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.form-content {
+    width: 66.67%;
+    display: flex;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn-register {
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: uppercase;
+    border-radius: 32px;
+    padding: 10px 50px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.btn-register:hover {
+    opacity: 0.8;
+}
+
+.bottom-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.bottom-line a {
+    color: var(--black);
+}
+
+.bottom-line a:hover {
+    text-decoration: none;
+}

@@ -2,17 +2,20 @@
     --white:#FFF;
     --card-back:#f3f4f6;
     --card-text:#9ca3af;
+    --back:#f8fafc;
 }
-/* Featured Companies */
+
 .companies {
     padding: 64px 0;
-    background: #f8fafc;
+    background: var(--back);
 }
 
 .companies-grid {
     display: grid;
-    /* min width of each card is 150px and maximum is 1 fraction of available space
-       If there is extra space it will distributed among columns */
+    /* min width of each card is 150px.
+       If there is extra space it will distributed among cards equally 
+       nice CSS hacks @BCS221093
+    */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 24px;
 }

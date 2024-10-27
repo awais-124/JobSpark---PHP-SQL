@@ -3,9 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JobSpark - Register Page</title>
+    <link rel="stylesheet" href="./styles/generalStyles.css">
+    <link rel="stylesheet" href="./styles/RegisterPage/form.css">
+    <link rel="stylesheet" href="./styles/RegisterPage/input-field-row.css">
+    <link rel="stylesheet" href="./styles/RegisterPage/media-queries.css">
+    <link rel="stylesheet" href="./styles/RegisterPage/common-styles.css">
 </head>
 <body>
-    
+    <!-- All styles except input fields and media queries are in form.css
+    media queries are in media-queries.css -->
+    <div class="form-container">
+        <div class="image-column"></div>
+
+        <div class="form-content">
+            <h3 class="register-form-heading">Create Account</h3>
+
+            <!-- STYLES IN ./input-field-row.css -->
+            <div class="form-fields-row">
+                <div class="input-column">
+                    <div class="input-group">
+                        <input type="text" id="firstName" name="firstName" required placeholder=" ">
+                        <label for="firstName">First Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="lastName" name="lastName" required placeholder=" ">
+                        <label for="lastName">Last Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+
+                <div class="input-column">
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" required placeholder=" ">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder=" ">
+                        <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="url" id="linkedIn" name="linkedIn" placeholder=" ">
+                        <label for="linkedIn">LinkedIn URL</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="full-width-row">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="notifications" name="notifications">
+                    <label for="notifications">I would like to receive email notifications about new job opportunities and updates</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="policy" name="policy" required>
+                    <label for="policy">I agree to the Terms of Service and Privacy Policy</label>
+                </div>
+
+                <button class="btn-register">Register</button>
+
+                <div class="bottom-line">
+                    <p>Already have an account?</p>
+                    <a href="#">Login Here!</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

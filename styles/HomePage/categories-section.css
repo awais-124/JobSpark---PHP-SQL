@@ -7,12 +7,12 @@
     --dark-light: #4d535d;
     --white: #ffffff;
     --gray: #f5f5f5;
+    --back:#f9fafb;
 }
 
- /* Job Categories */
 .categories {
     padding: 64px 0;
-    background: #f9fafb;
+    background: var(--back);
 }
 
 .categories-grid {
@@ -24,10 +24,10 @@
 }
 
 .category-card {
-    background: white;
+    background: var(--gray);
     padding: 24px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
     transition: box-shadow 0.3s ease;
 }
 
@@ -47,6 +47,6 @@
 }
 
 .job-count {
-    color: #6b7280;
+    color: var(--dark-light);
     font-size: 0.9rem;
 }

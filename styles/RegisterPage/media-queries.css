@@ -1,0 +1,37 @@
+@media (max-width: 1250px) {
+    .form-container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .image-column {
+        width: 100%;
+        height: 200px;
+    }
+
+    .form-content {
+        width: 100%;
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .input-column {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .image-column{
+        display: none;
+    }
+    .form-fields-row {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    .input-column{
+        width: 100%;
+    }
+}

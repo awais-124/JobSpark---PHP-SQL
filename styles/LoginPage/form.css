@@ -1,8 +1,9 @@
 :root {
     --white: #ffffff;
-    --back:#ecf1f1;
+    --back:#f1f5f5;
     --black:#000;
     --dark: #393E46;
+    --form-back:#ffffff;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    gap: 20px;
     overflow-y: hidden;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -33,10 +35,10 @@ a:hover, a:focus {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap:20px;
-    width: 40%;
-    background-color:var(--white);
-    padding: 50px;
+    gap:30px;
+    width: 35%;
+    background-color:var(--form-back);
+    padding: 50px 60px;
     border-radius: 32px;
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.35);
     box-shadow: 0 5px 10px #0000009d;
@@ -45,6 +47,7 @@ a:hover, a:focus {
 
 .form-container h3{
     color: var(--black);
+    font-size: 25px;
     text-align: left;
     margin-bottom:20px ;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
