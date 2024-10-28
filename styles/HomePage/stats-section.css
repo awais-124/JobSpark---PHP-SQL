@@ -1,11 +1,12 @@
+/*  CSS VARIABLES FOR PRE-DEFINED COLOR SCHEME  */
 :root {
     --primary: #3F72AF;
     --dark-gray:#474747;
-    --back: #f9fafb;
+    --stats-back: #f5f5f5;
 }
 
 .statistics {
-    background: var(--back);
+    background: var(--stats-back);
     padding: 48px 0;
 }
 

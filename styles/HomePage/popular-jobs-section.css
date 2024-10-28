@@ -1,3 +1,4 @@
+/*  CSS VARIABLES FOR PRE-DEFINED COLOR SCHEME  */
 :root {
     --primary: #3F72AF;
     --primary-light: #5488c7;
@@ -17,6 +18,15 @@
 
 .jobs-grid {
     display: grid;
+    
+    /* min width of each card is 250px and maximum is 1 fraction of available space
+       If there is extra space it will distributed among columns 
+       repeat function make sure that the style is applied to every
+       items(child) of grid and minmax function defines minimum and maximum 
+       widths of child items minmax(minimum-width, maximum-width
+       nice CSS hacks @BCS221093
+    */
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
 }

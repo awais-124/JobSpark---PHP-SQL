@@ -1,4 +1,4 @@
-* {
+* { /*  RESETTING DEFAULT BROWSER STYLING   */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,10 +6,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*   applying transition on hovering to all elements  */
 *:hover {
     transition: all 0.5s;
 }
 
+/*   focussed element's outline removal   */
 *:focus {
     outline: none;
 }
@@ -25,21 +27,24 @@
     --gray: #f5f5f5;
 }
 
+/*   SCROLL BAR STYLES   */
 ::-webkit-scrollbar {
     width: 12px;
-    background-color: var(--gray);
 }
 
+/*   SCROLL BAR TRACK STYLES   */
 ::-webkit-scrollbar-track {
     background-color: var(--dark-light);
 }
 
+/*   SCROLL BAR THUMB STYLES   */
 ::-webkit-scrollbar-thumb {
     background-color: var(--primary);
     border-radius: 10px;
     border: 3px solid var(--dark-light); 
 }
 
+/*   ON HOVER   */
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-light);
 }

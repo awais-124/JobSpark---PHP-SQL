@@ -1,17 +1,23 @@
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {    /* for tablet level devices*/
 .bottom-line {
     gap: 0;
     padding: 0 10px;
 }
 .form-container {
-    width: 45%;
+    width: 50%;
 }
 .fade-bg {
     width: 55%;
 }
 }
 
-@media (max-width: 900px) {
+@media (max-width:1050px) { /* form adjustment for medium-sized devices*/
+    .form-container {
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {   /*small sized devices*/
 .form-container {
     width: 60%;
     padding:4rem;
@@ -25,10 +31,14 @@ body {
     justify-content: center;
     height: 100vh;
     padding: 0;
+    background-color: ghostwhite;
+}
+.bottom-line{
+    gap: 10px;
 }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px) { /* very small sized devices */
 .form-container {
     width: 90%;
     padding:2rem;
@@ -37,7 +47,6 @@ body {
     display: none;
 }
 body {
-    background-color: #ddd;
     justify-content: center;
     height: 100vh;
 }

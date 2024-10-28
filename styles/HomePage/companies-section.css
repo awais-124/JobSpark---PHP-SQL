@@ -1,19 +1,24 @@
+/*  CSS VARIABLES FOR PRE-DEFINED COLOR SCHEME  */
 :root {
     --white:#FFF;
     --card-back:#f3f4f6;
     --card-text:#9ca3af;
-    --back:#f8fafc;
+    --companies-back:#f5f5f5;
 }
 
 .companies {
     padding: 64px 0;
-    background: var(--back);
+    background: var(--companies-back);
 }
 
 .companies-grid {
     display: grid;
-    /* min width of each card is 150px.
-       If there is extra space it will distributed among cards equally 
+    
+    /* min width of each card is 250px and maximum is 1 fraction of available space
+       If there is extra space it will distributed among columns 
+       repeat function make sure that the style is applied to every
+       items(child) of grid and minmax function defines minimum and maximum 
+       widths of child items minmax(minimum-width, maximum-width
        nice CSS hacks @BCS221093
     */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

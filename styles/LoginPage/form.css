@@ -1,3 +1,4 @@
+/*  CSS VARIABLES FOR PRE-DEFINED COLOR SCHEME  */
 :root {
     --white: #ffffff;
     --back:#f1f5f5;
@@ -21,12 +22,12 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-a:link,a:visited {
+.login-form-bottom-link:link,.login-form-bottom-link:visited {
     text-decoration: underline;
     color: var(--black);
 }
 
-a:hover, a:focus {
+.login-form-bottom-link:hover, .login-form-bottom-link:focus {
     text-decoration: none;
 }
 
@@ -38,7 +39,7 @@ a:hover, a:focus {
     gap:30px;
     width: 35%;
     background-color:var(--form-back);
-    padding: 50px 60px;
+    padding: 40px;
     border-radius: 32px;
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.35);
     box-shadow: 0 5px 10px #0000009d;
@@ -66,4 +67,5 @@ a:hover, a:focus {
     gap: 5px;
     width: 100%;
     padding: 0 25px;
+    font-size: 16px;
 }

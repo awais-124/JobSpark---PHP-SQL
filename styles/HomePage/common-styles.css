@@ -1,3 +1,4 @@
+/*  CSS VARIABLES FOR PRE-DEFINED COLOR SCHEME  */
 :root {
     --dark: #393E46;
 }
@@ -16,7 +17,9 @@
     font-size: 30px;
 }
 
-/* media queries for responsive */
+/* ========= MEDIA QUERIES FOR ADJUSTMENT FOR DIFFERENT SCREENS ========= */
+
+/*  TABLET SIZED DEVICES    */
  @media (max-width: 1200px) {
 .hero {
     flex-direction: column;
@@ -35,6 +38,7 @@
 
 }
 
+/*  Medium sized devices    */
 @media (max-width: 900px) {
     .logo {
         display: none;
@@ -47,6 +51,7 @@
     }
 }    
 
+/*  Small devices adjustments   */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
@@ -64,7 +69,7 @@
     }
 }
 
-/* Search bar styling for very small sized devices */
+/* Adjustments very small sized devices */
 @media (max-width: 640px) {
     .search-box {
         padding: 0.5rem;
@@ -102,5 +107,33 @@
     }
     .search-btn {
          padding: 0.3rem 1.5rem;
+    }
+}
+
+
+/*   TESTIMONIAL SECTION RESPONSIVE ADJUSTMENTS   */
+@media (max-width: 1100px) {
+    .testimonials-grid {
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        width: calc(50% - 10px);
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .testimonials {
+        padding: 60px 0;
     }
 }
