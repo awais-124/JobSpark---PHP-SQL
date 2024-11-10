@@ -10,24 +10,91 @@
     <title>JobSpark - Login Page</title>
 </head>
 <body>
-    <img src="./assets/images/login-background.png" class="fade-bg" alt="login-bckground-image">
-    <div class="form-container">
+    <img src="./assets/images/login-background.png" class="fade-bg" alt="login-background-image">
+    <form class="form-container" onsubmit="formValidator(event)">
         <h3>Welcome Back</h3>
         <div class="form-fields">
              <div class="input-group">
-                <input type="email" id="email" name="email" required placeholder=" ">
-                <label for="email">Email</label>
+                <input type="text" id="username" name="username" required placeholder=" ">
+                <label for="username">Username</label>
             </div>
             <div class="input-group">
                 <input type="password" id="password" name="password" required placeholder=" ">
                 <label for="password">Password</label>
             </div>
-            <button class="btn-login"><a href="./HomePage.html">Login</a></button>
+            <!-- Remove the <a> tag inside the button -->
+            <button type="submit" class="btn-login">Login</button>
         </div>
         <div class="bottom-line">
             <p>Don't have an account?</p>
             <a class="login-form-bottom-link" href="./RegisterPage.html">Create Now!</a>
         </div>
-    </div>
+    </form>
+    
+    <script>
+        function formValidator(e) {
+            // this function helps to prevent the default behavior 
+            // of page. In this case it helps to avoid reloading of web page, 
+            // when form is submittted
+            e.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            for (let i = 0; i < username.length; i++) {
+                const char = username[i];
+                if (
+                    !((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z') || char === '_' || char === '-')
+                ) {
+                    alert("Username should only contain letters, underscores (_), and dashes (-).");
+                    return false;
+                }
+            }
+
+            if(username.length < 5) {
+                alert("Username must be atleast 5 characters long.")
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false;
+            }
+
+            let hasUpperCase = false;
+            let hasLowerCase = false;
+            let hasNumber = false;
+            let hasSpecialChar = false;
+            const specialCharacters = "@$!%*?&";
+
+            for (let i = 0; i < password.length; i++) {
+                const char = password[i];
+                if (char >= 'A' && char <= 'Z') hasUpperCase = true;
+                else if (char >= 'a' && char <= 'z') hasLowerCase = true;
+                else if (char >= '0' && char <= '9') hasNumber = true;
+                else if (specialCharacters.includes(char)) hasSpecialChar = true;
+            }
+
+            if (!hasUpperCase) {
+                alert("Password must contain at least one uppercase letter.");
+                return false;
+            }
+            if (!hasLowerCase) {
+                alert("Password must contain at least one lowercase letter.");
+                return false;
+            }
+            if (!hasNumber) {
+                alert("Password must contain at least one number.");
+                return false;
+            }
+            if (!hasSpecialChar) {
+                alert("Password must contain at least one special character (@, $, !, %, *, ?, &).");
+                return false;
+            }
+
+            window.location.href = './HomePage.html';
+            return true;
+        }
+    </script>
 </body>
 </html>
