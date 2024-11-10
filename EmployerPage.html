@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/EmployerPage/styles.css">
+</head>
+<body class="bg-light">
+    <header class="custom-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logos/logo.png" alt="nav-logo">
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#header">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./HomePage.html">Find Jobs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./HomePage.html#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ProfilePage.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./EmployerPage.html">Employer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./LoginPage.html">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container py-4">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="nav flex-column nav-pills">
+                            <button class="nav-link active mb-2" data-bs-toggle="pill" data-bs-target="#post-job">
+                                Post a New Job
+                            </button>
+                            <button class="nav-link mb-2" data-bs-toggle="pill" data-bs-target="#applicants">
+                                Applicants
+                            </button>
+                            <button class="nav-link mb-2" data-bs-toggle="pill" data-bs-target="#active-jobs">
+                                Active Jobs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div class="tab-content">
+                    <!-- Post Job Form -->
+                    <div class="tab-pane fade show active" id="post-job">
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h4 class="mb-0 text-custom-dark">Post a New Job</h4>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Job Title</label>
+                                            <input type="text" class="form-control" placeholder="e.g. Senior React Developer">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Department</label>
+                                            <select class="form-select">
+                                                <option>IT & Software</option>
+                                                <option>Design</option>
+                                                <option>Marketing</option>
+                                                <option>Sales</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Job Type</label>
+                                            <select class="form-select">
+                                                <option>Full Time</option>
+                                                <option>Part Time</option>
+                                                <option>Contract</option>
+                                                <option>Internship</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Experience Level</label>
+                                            <select class="form-select">
+                                                <option>Entry Level</option>
+                                                <option>Mid Level</option>
+                                                <option>Senior Level</option>
+                                                <option>Expert</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Salary Range</label>
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Min" min="0">
+                                                <span class="input-group-text">to</span>
+                                                <input type="number" class="form-control" placeholder="Max" min="0">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Location</label>
+                                            <input type="text" class="form-control" placeholder="e.g. Islamabad, Pakistan">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label">Required Skills</label>
+                                            <input type="text" class="form-control" placeholder="e.g. React, Node.js, MongoDB">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label">Job Description</label>
+                                            <textarea class="form-control" rows="4" placeholder="Enter detailed job description"></textarea>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label class="form-label">Requirements</label>
+                                            <textarea class="form-control" rows="4" placeholder="Enter job requirements"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-custom-primary">Post Job</button>
+                                            <button type="button" class="btn btn-outline-secondary ms-2">Save Draft</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Applicants List -->
+                    <div class="tab-pane fade" id="applicants">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0 text-custom-dark">Recent Applicants</h4>
+                                <div class="input-group w-auto">
+                                    <input type="text" class="form-control" placeholder="Search applicants...">
+                                    <button class="btn btn-custom-primary">Search</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Sample Applicant Card -->
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="card-title">John Doe</h5>
+                                                    <span class="badge bg-custom-primary">New</span>
+                                                </div>
+                                                <p class="card-text">Applied for: Senior React Developer</p>
+                                                <p class="small text-muted">Experience: 5 years</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Profile</button>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-success">Shortlist</button>
+                                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="card-title">Sarah Wilson</h5>
+                                                    <span class="badge bg-custom-primary">New</span>
+                                                </div>
+                                                <p class="card-text">Applied for: UI/UX Designer</p>
+                                                <p class="small text-muted">Experience: 3 years</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Profile</button>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-success">Shortlist</button>
+                                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="card-title">Michael Chen</h5>
+                                                    <span class="badge bg-custom-secondary">Reviewed</span>
+                                                </div>
+                                                <p class="card-text">Applied for: Full Stack Developer</p>
+                                                <p class="small text-muted">Experience: 4 years</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Profile</button>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-success">Shortlist</button>
+                                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="card-title">Emma Thompson</h5>
+                                                    <span class="badge bg-success">Shortlisted</span>
+                                                </div>
+                                                <p class="card-text">Applied for: Product Manager</p>
+                                                <p class="small text-muted">Experience: 6 years</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Profile</button>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-success">Shortlist</button>
+                                                        <button class="btn btn-sm btn-outline-danger">Reject</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="active-jobs">
+                        <div class="card">
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0 text-custom-dark">Active Job Listings</h4>
+                                <div class="input-group w-auto">
+                                    <input type="text" class="form-control" placeholder="Search jobs...">
+                                    <button class="btn btn-custom-primary">Search</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <!-- Active Job Cards -->
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <h5 class="card-title">Senior React Developer</h5>
+                                                    <span class="badge bg-success">Active</span>
+                                                </div>
+                                                <p class="card-text text-muted mb-2">Full Time • Islamabad</p>
+                                                <p class="small mb-2">Posted 2 days ago • 15 applicants</p>
+                                                <div class="mb-3">
+                                                    <span class="badge bg-light text-dark me-1">React</span>
+                                                    <span class="badge bg-light text-dark me-1">Node.js</span>
+                                                    <span class="badge bg-light text-dark">MongoDB</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Details</button>
+                                                    <button class="btn btn-sm btn-outline-danger">Close Listing</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <h5 class="card-title">UI/UX Designer</h5>
+                                                    <span class="badge bg-success">Active</span>
+                                                </div>
+                                                <p class="card-text text-muted mb-2">Full Time • Remote</p>
+                                                <p class="small mb-2">Posted 5 days ago • 23 applicants</p>
+                                                <div class="mb-3">
+                                                    <span class="badge bg-light text-dark me-1">Figma</span>
+                                                    <span class="badge bg-light text-dark me-1">Adobe XD</span>
+                                                    <span class="badge bg-light text-dark">Sketch</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Details</button>
+                                                    <button class="btn btn-sm btn-outline-danger">Close Listing</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <h5 class="card-title">Product Manager</h5>
+                                                    <span class="badge bg-success">Active</span>
+                                                </div>
+                                                <p class="card-text text-muted mb-2">Full Time • Lahore</p>
+                                                <p class="small mb-2">Posted 1 week ago • 28 applicants</p>
+                                                <div class="mb-3">
+                                                    <span class="badge bg-light text-dark me-1">Agile</span>
+                                                    <span class="badge bg-light text-dark me-1">Scrum</span>
+                                                    <span class="badge bg-light text-dark">JIRA</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Details</button>
+                                                    <button class="btn btn-sm btn-outline-danger">Close Listing</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card applicant-card">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <h5 class="card-title">DevOps Engineer</h5>
+                                                    <span class="badge bg-success">Active</span>
+                                                </div>
+                                                <p class="card-text text-muted mb-2">Full Time • Karachi</p>
+                                                <p class="small mb-2">Posted 3 days ago • 12 applicants</p>
+                                                <div class="mb-3">
+                                                    <span class="badge bg-light text-dark me-1">AWS</span>
+                                                    <span class="badge bg-light text-dark me-1">Docker</span>
+                                                    <span class="badge bg-light text-dark">Kubernetes</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <button class="btn btn-sm btn-custom-primary">View Details</button>
+                                                    <button class="btn btn-sm btn-outline-danger">Close Listing</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

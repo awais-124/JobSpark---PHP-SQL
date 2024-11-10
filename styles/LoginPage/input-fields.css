@@ -25,6 +25,12 @@
     width: 100%;
 }
 
+.btn-login a{
+    text-decoration: none;
+    color: var(--white);
+    width: 100%;
+}
+
 .btn-login:hover {
     opacity: 0.9;
     cursor: pointer;

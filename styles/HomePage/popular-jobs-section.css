@@ -30,10 +30,17 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
 }
-
+.card-header{
+    background-color: var(--primary);
+    padding: 22px 24px;
+    border-radius: 8px 8px 0 0;
+}
+.card-body{
+    padding: 22px 24px;
+}
 .job-card {
     border: 1px solid #e5e7eb;
-    padding: 24px;
+    /* padding: 24px; */
     border-radius: 8px;
     transition: border-color 0.3s ease;
 }
@@ -43,9 +50,10 @@
 }
 
 .job-title {
+    color: #ffffff;
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
 
 .job-details {

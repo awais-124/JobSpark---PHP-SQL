@@ -1,0 +1,126 @@
+/* Variables */
+:root {
+    --primary: #3F72AF;
+    --primary-light: #5488c7;
+    --secondary: #00ADB5;
+    --secondary-light: #00c2cc;
+    --dark: #393E46;
+    --dark-light: #4d535d;
+    --white: #ffffff;
+    --gray: #f5f5f5;
+}
+
+/* Header and Navigation */
+.custom-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    width: 200px;
+    height: 50px;
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+    transition: all 0.3s;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding: 3px 0;
+    margin: 0 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--dark);
+    border-bottom: 2px solid var(--dark-light);
+}
+
+.navbar-toggler {
+    border-color: var(--primary);
+    padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(63, 114, 175, 0.25);
+}
+
+/* Button Styles */
+.btn-custom-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+}
+
+.btn-custom-primary:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+}
+
+.btn-custom-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+    border: none;
+}
+
+.btn-custom-secondary:hover {
+    background-color: var(--secondary-light);
+    color: var(--white);
+}
+
+/* Background Colors */
+.bg-custom-primary {
+    background-color: var(--primary);
+}
+
+.bg-custom-secondary {
+    background-color: var(--secondary);
+}
+
+/* Text Colors */
+.text-custom-dark {
+    color: var(--dark);
+}
+
+/* Form Control */
+.form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.25rem rgba(63, 114, 175, 0.25);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray);
+}
+
+/* Applicant Card */
+.applicant-card:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Pills */
+.nav-pills .nav-link.active {
+    background-color: var(--primary);
+}
+
+.nav-pills .nav-link {
+    color: var(--dark);
+}

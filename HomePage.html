@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/HomePage/companies-section.css">
     <link rel="stylesheet" href="./styles/HomePage/stats-section.css">
     <link rel="stylesheet" href="./styles/HomePage/testimonials-section.css">
+    <link rel="stylesheet" href="./styles/HomePage/contact-section.css">
     <link rel="stylesheet" href="./styles/HomePage/footer.css">
     <link rel="stylesheet" href="./styles/HomePage/common-styles.css">
     <title>JobSpark - Your Dream Jobs</title>
@@ -24,16 +25,16 @@
 
 <body>
     <!-- Header section with Navbar - STYLES in header.css-->
-    <header>
+    <header id="header">
         <nav>
             <a href="#" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Find Jobs</a>
-                <a href="#">Profile</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact</a>
-                <a href="#">Employer</a>
+                <a href="#header">Home</a>
+                <a href="#jobs-section">Find Jobs</a>
+                <a href="#contact">Contact</a>
+                <a href="./profile.html">Profile</a>
+                <a href="./EmployerPage.html">Employer</a>
+                <a href="./LoginPage.html">Logout</a>
             </div>
         </nav>
     </header>
@@ -149,30 +150,42 @@
     </section>
 
     <!-- Featured Jobs  - STYLES in popular-jobs-sections.css-->
-    <section class="featured-jobs">
+    <section class="featured-jobs" id="jobs-section">
         <div class="container">
             <h2 class="section-title">Featured Jobs</h2>
             <div class="jobs-grid">
                 <div class="job-card">
-                    <h3 class="job-title">Senior Software Engineer</h3>
-                    <div class="job-details">Devsinc</div>
-                    <div class="job-details">Islamabad</div>
-                    <div class="job-details">Rs. 350,000 - 450,000 • Full-time</div>
-                    <a href="#" class="view-job">View Details →</a>
+                    <div class="card-header">
+                        <h3 class="job-title">Senior Software Engineer</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="job-details">Devsinc</div>
+                        <div class="job-details">Islamabad</div>
+                        <div class="job-details">Rs. 350,000 - 450,000 • Full-time</div>
+                        <a href="#" class="view-job">View Details →</a>
+                    </div>
                 </div>
                 <div class="job-card">
-                    <h3 class="job-title">MERN Developer</h3>
-                    <div class="job-details">Pixasart Studios</div>
-                    <div class="job-details">Lahore</div>
-                    <div class="job-details">Rs. 220,000 - 300,000 • Full-time</div>
-                    <a href="#" class="view-job">View Details →</a>
+                    <div class="card-header">
+                        <h3 class="job-title">Data Scientist</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="job-details">Systems Limited</div>
+                        <div class="job-details">Islamabad</div>
+                        <div class="job-details">Rs. 400,000 - 550,000 • Full-time</div>
+                        <a href="#" class="view-job">View Details →</a>
+                    </div>
                 </div>
                 <div class="job-card">
-                    <h3 class="job-title">Data Scientist</h3>
-                    <div class="job-details">Systems Limited</div>
-                    <div class="job-details">Islamabad</div>
-                    <div class="job-details">Rs. 400,000 - 550,000 • Full-time</div>
-                    <a href="#" class="view-job">View Details →</a>
+                    <div class="card-header">
+                        <h3 class="job-title">MERN Developer</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="job-details">Pixasart Studios</div>
+                        <div class="job-details">Lahore</div>
+                        <div class="job-details">Rs. 220,000 - 300,000 • Full-time</div>
+                        <a href="#" class="view-job">View Details →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,6 +307,68 @@
         </div>
     </section>
 
+    <!-- Footer Section  - STYLES in contact-section.css -->
+    <section class="contact-container-full" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries or support</p>
+        </div>
+        
+        <div class="contact-content">
+            <!-- Left Column - Quick Links -->
+            <div class="contact-links">                
+                <div class="link-group">
+                    <h4>For Job Seekers</h4>
+                    <ul class="link-list">
+                        <li><a href="#">Search Jobs</a></li>
+                        <li><a href="#">Upload Resume</a></li>
+                        <li><a href="#">It Jobs</a></li>
+                        <li><a href="#">Business Jobs</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-group">
+                    <h4>For Employers</h4>
+                    <ul class="link-list">
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Search Companies</a></li>
+                        <li><a href="#">Filter candidates</a></li>
+                        <li><a href="#">Check posted jobs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Right Column - Contact Information -->
+            <div class="contact-info">                
+                <div class="contact-info-item">
+                    <h4>Our Office</h4>
+                    <p>Plot No. 24, Sector I-9/3</p>
+                    <p>Blue Area, Near PTCL HQ</p>
+                    <p>Islamabad, Pakistan 44000</p>
+                </div>
+
+                <div class="contact-info-item">
+                    <h4>Contact Details</h4>
+                    <p>Phone: +92 326 9872844</p>
+                    <p>Email: bcs221093@jobspark.com</p>
+                    <p>Hours: Mon-Fri, 9:00 AM - 6:00 PM (PST)</p>
+                </div>
+                
+                <div class="contact-info-item">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">FB</a>
+                        <a href="#" title="Twitter">TW</a>
+                        <a href="#" title="LinkedIn">IN</a>
+                        <a href="#" title="Instagram">IG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
     <!-- Footer Section  - STYLES in footer.css -->
     <footer>
         <p>&copy; 2024 JobSpark @BCS221093. All rights reserved.</p>

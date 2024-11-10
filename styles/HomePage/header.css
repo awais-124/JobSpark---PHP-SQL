@@ -12,7 +12,7 @@
 
 header {
     background-color: var(--white);
-    padding: 15px 5%;
+    padding: 10px 5%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -49,12 +49,14 @@ nav {
     color: var(--dark);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
-    text-shadow: 0 2px 2px #81818179;
+    transition: all 0.3s;
+    /* text-shadow: 0 2px 2px #81818179; */
+    border-top: 2px solid var(--white);
     border-bottom: 2px solid var(--white);
     padding: 3px 0;
 }
 
 .nav-links a:hover {
-    border-bottom: 1px solid #818181;
+    border-bottom: 2px solid var(--dark-light);
+    transition: all 0.3s;
 }
