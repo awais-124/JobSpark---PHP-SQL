@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/LoginPage/media-queries.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobSpark - Login Page</title>
+    <title>Login Page - JobSpark</title>
 </head>
 <body>
     <img src="./assets/images/login-background.png" class="fade-bg" alt="login-background-image">
@@ -64,7 +64,7 @@
             let hasLowerCase = false;
             let hasNumber = false;
             let hasSpecialChar = false;
-            const specialCharacters = "@$!%*?&";
+            const specialCharacters = '!@#$%^&*()_+={}[]|\\:;"\'<>,.?/~`';
 
             for (let i = 0; i < password.length; i++) {
                 const char = password[i];
@@ -87,7 +87,7 @@
                 return false;
             }
             if (!hasSpecialChar) {
-                alert("Password must contain at least one special character (@, $, !, %, *, ?, &).");
+                alert("Password must contain at least one special character (e.g. @, $, !, %, *, ?, &).");
                 return false;
             }
 

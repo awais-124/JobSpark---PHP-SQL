@@ -89,9 +89,13 @@
     color: var(--dark);
 }
 
+.text-custom-light {
+    color: var(--white);
+}
+
 .form-control:focus {
     border-color: var(--primary-light);
-    box-shadow: 0 0 0 0.25rem rgba(63, 114, 175, 0.25);
+    /* box-shadow: 0 0 0 0.25rem rgba(63, 114, 175, 0.25); */
 }
 
 .card {

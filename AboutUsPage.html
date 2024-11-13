@@ -16,21 +16,26 @@
 
 <!-- 
 
-    RESPONSIVE USING MEDIA QUERIES in `./styles/AboutUsPage/styles.css`
+    This page is made responsive using
+    MEDIA QUERIES. styles in `./styles/AboutUsPage/styles.css`
 
 -->
 <body class="bg-light">
     <header id="header">
         <nav class="home-page-nav">
-            <a href="#header" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
+            <a href="#header" class="logo">
+                <img src="./assets/logos/logo.png" alt="nav-logo">
+            </a>
             <div class="nav-links">
                 <a href="./HomePage.html#header">Home</a>
                 <a href="./HomePage.html#jobs-section">Find Jobs</a>
                 <a href="./#contact">Contact</a>
                 <a href="#header">About</a>
                 <a href="./EmployerPage.html">Employer</a>
-                <a href="./LoginPage.html">Logout</a>
+                <a href="./LoginPage.html" class="btn-logout">Logout</a>
             </div>
+
+            <!-- Ham-burger icon for mobile devices -->
             <div class="ham-burger">
                 <a href="#header" class="menu-link">
                     <img src="./assets/icons/ham-burger.png" alt="ham-burger-icon">
@@ -39,7 +44,7 @@
         </nav>
     </header>
 
-    <!-- JS CODE TO HANDLE NAV BAR RESPONSIVE NESS ON MOBILE DEVICES -->
+    <!-- JS CODE TO HANDLE NAV BAR RESPONSIVE-NESS ON MOBILE DEVICES -->
     <script>
         const hamBurger = document.querySelector('.ham-burger');
         const navLinks = document.querySelector('.nav-links');
@@ -67,7 +72,20 @@
                 Our mission is to bridge the gap between job seekers and employers by creating a platform that is both intuitive and effective. We are dedicated to helping individuals grow in their careers while helping organizations find the right people to contribute to their success. By offering tools for resume building, job alerts, and a user-friendly interface, we aim to create a supportive environment for career growth and recruitment success.
             </p>
         </div>
+        <div class="info-box">
+            <h3 class="info-heading">Our Core Values</h3>
+            <p class="info-text">
+                Integrity, inclusivity, and innovation are at the heart of everything we do. We believe in providing a platform that is accessible and fair to everyone, regardless of background or industry. By fostering a culture of transparency and continuous improvement, we strive to create a community where talent can thrive and employers can find the perfect fit.
+            </p>
+        </div>
+        <div class="info-box">
+            <h3 class="info-heading">What We Offer</h3>
+            <p class="info-text">
+                From personalized job recommendations to a resume builder and skill assessments, we offer a wide range of tools to empower both job seekers and recruiters. Our platform supports you at every stage—whether you're exploring opportunities or looking to make the perfect hire. We aim to be a one-stop solution that grows with you.
+            </p>
+        </div>
     </section>
+
 
     <section class="contact-container-full" id="contact">
         <div class="contact-container">

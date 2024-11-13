@@ -79,7 +79,7 @@ nav {
         right: 0;
         background-color: var(--white);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 70%;
+        width: 100%;
         gap: 1rem;
         padding: 1rem;
     }
