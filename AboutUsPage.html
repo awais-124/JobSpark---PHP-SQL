@@ -20,19 +20,32 @@
 
 -->
 <body class="bg-light">
-    <header id="header dim-bg">
-        <nav>
-            <a href="#" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
+    <header id="header">
+        <nav class="home-page-nav">
+            <a href="#header" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
             <div class="nav-links">
-                <a href="./HomePage.html">Home</a>
-                <a href="#jobs-section">Find Jobs</a>
-                <a href="#contact">Contact</a>
-                <a href="./AboutUsPage.html">About</a>
+                <a href="./HomePage.html#header">Home</a>
+                <a href="./HomePage.html#jobs-section">Find Jobs</a>
+                <a href="./#contact">Contact</a>
+                <a href="#header">About</a>
                 <a href="./EmployerPage.html">Employer</a>
                 <a href="./LoginPage.html">Logout</a>
             </div>
+            <div class="ham-burger">
+                <a href="#header" class="menu-link">
+                    <img src="./assets/icons/ham-burger.png" alt="ham-burger-icon">
+                </a>
+            </div>
         </nav>
     </header>
+
+    <!-- JS CODE TO HANDLE NAV BAR RESPONSIVE NESS ON MOBILE DEVICES -->
+    <script>
+        const hamBurger = document.querySelector('.ham-burger');
+        const navLinks = document.querySelector('.nav-links');
+        const toggleClasses = () => navLinks.classList.toggle('active')
+        hamBurger.addEventListener('click', toggleClasses);
+    </script>
 
     <section class="main-section">
         <div class="content">

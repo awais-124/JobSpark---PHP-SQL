@@ -1,4 +1,4 @@
-/*  CSS VARIABLES FOR PRE-DEFINED COLOR SCHEME  */
+/* CSS VARIABLES FOR PRE-DEFINED COLOR SCHEME */
 :root {
     --primary: #3F72AF;
     --primary-light: #5488c7;
@@ -35,7 +35,7 @@ nav {
     height: 50px;
 }
 
-.logo img{
+.logo img {
     height: 100%;
     width: 100%;
 }
@@ -50,7 +50,6 @@ nav {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
-    /* text-shadow: 0 2px 2px #81818179; */
     border-top: 2px solid var(--white);
     border-bottom: 2px solid var(--white);
     padding: 3px 0;
@@ -59,4 +58,52 @@ nav {
 .nav-links a:hover {
     border-bottom: 2px solid var(--dark-light);
     transition: all 0.3s;
+}
+
+.ham-burger {
+    display: none;
+}
+
+.ham-burger a img {
+    height: 35px;
+    width: 35px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 640px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px; 
+        right: 0;
+        background-color: var(--white);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 70%;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        border: none;
+        transition: all 0.5s;
+    }
+
+    .nav-links a:hover{
+        text-decoration: underline;
+        color: var(--primary);
+        border: none;
+        transition: all 0.5s;
+    }
+
+    .ham-burger {
+        display: block;
+        cursor: pointer;
+        padding-right: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }

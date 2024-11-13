@@ -26,8 +26,8 @@
 <body>
     <!-- Header section with Navbar - STYLES in header.css-->
     <header id="header">
-        <nav>
-            <a href="#" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
+        <nav class="home-page-nav">
+            <a href="#header" class="logo"><img src="./assets/logos/logo.png" alt="nav-logo"></a>
             <div class="nav-links">
                 <a href="#header">Home</a>
                 <a href="#jobs-section">Find Jobs</a>
@@ -36,8 +36,21 @@
                 <a href="./EmployerPage.html">Employer</a>
                 <a href="./LoginPage.html">Logout</a>
             </div>
+            <div class="ham-burger">
+                <a href="#header" class="menu-link">
+                    <img src="./assets/icons/ham-burger.png" alt="ham-burger-icon">
+                </a>
+            </div>
         </nav>
     </header>
+
+    <!-- JS CODE TO HANDLE NAV BAR RESPONSIVE NESS ON MOBILE DEVICES -->
+    <script>
+        const hamBurger = document.querySelector('.ham-burger');
+        const navLinks = document.querySelector('.nav-links');
+        const toggleClasses = () => navLinks.classList.toggle('active')
+        hamBurger.addEventListener('click', toggleClasses);
+    </script>
     <!-- Hero Section with search bar - STYLES in hero-section.css -->
     <section class="hero">
         <div class="hero-content">
@@ -293,9 +306,6 @@
                 </div>
                 <div class="company-logo">
                     <img title="DISNEY" src="./assets/logos/disney-plus.png" alt="company-logo">
-                </div>
-                <div class="company-logo">
-                    <img title="TELEGRAM" src="./assets/logos/telegram.png" alt="company-logo">
                 </div>
                 <div class="company-logo">
                     <img title="ELECTRONIC ARTS" src="./assets/logos/electronic-arts.png" alt="company-logo">
