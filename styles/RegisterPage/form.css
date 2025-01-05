@@ -7,19 +7,19 @@
 }
 
 body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--back);
-    padding: 20px;
-    overflow: hidden;
+    padding: 50px 20px;
+    overflow-y: scroll;
 }
 
 .form-container {
-    width: 85%;
-    height: 80%;
+    min-width: 85%;
+    min-height: 90%;
     background-color: var(--white);
     border-radius: 16px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -93,3 +93,19 @@ body {
 .bottom-line a:hover {
     text-decoration: none;
 }
+
+.error-messages {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border: 1px solid #ff9999;
+    border-radius: 4px;
+}
+.error {
+    color: #cc0000;
+    margin: 5px 0;
+    text-align: center;
+}
+ 

@@ -94,8 +94,8 @@
 
 /********* STYLES FOR ITEMS INSIDE EACH TESTIMONIAL CARD *********/
 .author-img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--light-gray);
@@ -121,4 +121,12 @@
     font-size: 0.875rem;
     color: var(--dark-gray);
     margin: 0;
+}
+
+.no-testimonials {
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / -1; /* Spans all columns */
+    background-color: var(--gray);
+    border-radius: 8px;
 }

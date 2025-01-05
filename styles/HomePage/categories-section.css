@@ -31,6 +31,10 @@
 }
 
 .category-card {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+    color: #000;
     background: var(--gray);
     padding: 24px;
     border-radius: 8px;

@@ -1,9 +1,8 @@
 @media (max-width: 1250px) {    /* Tablet sized devices */
     .form-container {
         width: 80%;
-        height: auto;
         flex-direction: column;
-        height: 90vh;
+        min-height: 95vh;
     }
     .image-column {
         width: 100%;
@@ -12,16 +11,20 @@
     .form-content {
         width: 100%;
         flex-direction: column;
-        padding: 15px 30px;
+        padding: 30px;
         gap: 5px;
-        height: 70%;
+        height: calc(70% - 30px);
+        margin-top: 30px;
+    }
+    .role-selection {
+        margin-top: 20px;
     }
     .form-fields-row {
         height: 40%;
         gap: 5px;
     }    
     .register-form-heading {
-        margin-bottom: 15px;
+        display: none;
     }
     .full-width-row {
         height: 30%;
@@ -37,24 +40,24 @@
         gap: 10px;
         padding: 20px 10px;
     }
-    .register-form-heading {
-        margin: 15px auto;
-    }
     .full-width-row {
         height: 35%;
+    }
+    .register-form-heading {
+        display: block;
     }
     .image-column{
         display: none;
     }
     .form-fields-row {
         flex-direction: column;
-        gap: 5px;
+        gap: 20px;
         width: 100%;
         height: 50%;
     }
     .input-column{
         width: 90%;
-        gap: 5px;
+        gap: 20px;
         padding: 0;
     }
     .input-group-register-form input {
@@ -63,9 +66,5 @@
     .btn-register {
         min-width: 90%;
         margin: 10px auto 5px;
-    }
-    .checkbox-group input[type="checkbox"] {
-        min-width: 13px;
-        min-height: 13px;
     }
 }

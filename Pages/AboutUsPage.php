@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Job Spark</title>
-    <link rel="stylesheet" href="./styles/AboutUsPage/styles.css">
-    <link rel="stylesheet" href="./styles/generalStyles.css">
-    <link rel="stylesheet" href="./styles/HomePage/header.css">
-    <link rel="stylesheet" href="./styles/HomePage/contact-section.css">
-    <link rel="stylesheet" href="./styles/HomePage/footer.css">
-    <link rel="stylesheet" href="./styles/HomePage/common-styles.css">
+    <link rel="stylesheet" href="../styles/AboutUsPage/styles.css">
+    <link rel="stylesheet" href="../styles/generalStyles.css">
+    <link rel="stylesheet" href="../styles/HomePage/header.css">
+    <link rel="stylesheet" href="../styles/HomePage/contact-section.css">
+    <link rel="stylesheet" href="../styles/HomePage/footer.css">
+    <link rel="stylesheet" href="../styles/HomePage/common-styles.css">
+
     <!-- The navbar and footer is same as Homepage so style
      are used from there.-->
+
 </head>
 
 <!-- 
@@ -21,28 +23,10 @@
 
 -->
 <body class="bg-light">
-    <header id="header">
-        <nav class="home-page-nav">
-            <a href="#header" class="logo">
-                <img src="./assets/logos/logo.png" alt="nav-logo">
-            </a>
-            <div class="nav-links">
-                <a href="./HomePage.html#header">Home</a>
-                <a href="./HomePage.html#jobs-section">Find Jobs</a>
-                <a href="./#contact">Contact</a>
-                <a href="#header">About</a>
-                <a href="./EmployerPage.html">Employer</a>
-                <a href="./LoginPage.html" class="btn-logout">Logout</a>
-            </div>
-
-            <!-- Ham-burger icon for mobile devices -->
-            <div class="ham-burger">
-                <a href="#header" class="menu-link">
-                    <img src="./assets/icons/ham-burger.png" alt="ham-burger-icon">
-                </a>
-            </div>
-        </nav>
-    </header>
+    <?php 
+        $currentPage = 'About';
+        include_once '../includes/applicant-header.php'
+    ?>
 
     <!-- JS CODE TO HANDLE NAV BAR RESPONSIVE-NESS ON MOBILE DEVICES -->
     <script>

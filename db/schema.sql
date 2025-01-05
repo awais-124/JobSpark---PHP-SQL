@@ -1,8 +1,7 @@
 CREATE TABLE users (
-    id INT AUTO_INCREMENT,
     userId VARCHAR(255) PRIMARY KEY, 
     fullname VARCHAR(255) NOT NULL,
-    username VARCHAR(255) NOT NULL CHECK (CHAR_LENGTH(username) >= 6),
+    username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     phone VARCHAR(20) NOT NULL,
     password VARCHAR(255) NOT NULL, 
@@ -22,17 +21,17 @@ CREATE TABLE jobs (
     category INT NOT NULL,
     title VARCHAR(255) NOT NULL,
     companyName VARCHAR(255) NOT NULL,
-    location varchar NOT NULL,
+    location varchar(255) NOT NULL,
     salaryRange VARCHAR(255),
     duration ENUM('part-time', 'full-time', 'contract', 'internship') NOT NULL,
     type ENUM('remote', 'onsite', 'hybrid') NOT NULL,
     datePosted DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    skills JSON,
+    skills TEXT,
     status ENUM('active', 'closed') NOT NULL DEFAULT 'active',
     numberOfApplicants INT NOT NULL DEFAULT 0,
     description TEXT NOT NULL,
     requirements TEXT NOT NULL,
-    department ENUM('IT', 'Design', 'Marketing', 'Sales', 'Government', 'Other') NOT NULL,
+    department varchar(255) NOT NULL,
     experience ENUM('entry-level', 'mid-level', 'senior-level', 'expert-level') NOT NULL,
     FOREIGN KEY (postedBy) REFERENCES users(userId) ON DELETE CASCADE,
     FOREIGN KEY (category) REFERENCES categories(id) ON DELETE CASCADE
@@ -40,11 +39,12 @@ CREATE TABLE jobs (
 
 CREATE TABLE testimonials (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    userId varchar(255),
     review TEXT NOT NULL,
     name VARCHAR(255) NOT NULL,
     occupation VARCHAR(255) NOT NULL,
     image VARCHAR(255) NOT NULL,
-    FOREIGN KEY (id) REFERENCES users(userId) ON DELETE SET NULL
+    FOREIGN KEY (userId) REFERENCES users(userId) ON DELETE SET NULL
 );
 
 CREATE TABLE applicants (
