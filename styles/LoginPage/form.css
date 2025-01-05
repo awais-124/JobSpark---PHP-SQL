@@ -75,3 +75,36 @@ body {
     margin: 5px 0;
     text-align: center;
 }
+
+ .top-right-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    background-color: #3F72AF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.top-right-btn:hover {
+    background-color: #5488c7;
+}
+
+@media (max-width: 768px) {
+    .top-right-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-right-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}

@@ -10,6 +10,8 @@
     <title>Login Page - JobSpark</title>
 </head>
 <body>
+    <button class="top-right-btn" onclick="window.location.href='../admin/admin.php'">ADMIN LOGIN</button>
+    
     <img src="../assets/images/login-background.png" class="fade-bg" alt="login-background-image">
     <form class="form-container" action="../controllers/check-login.php" method="POST">
         <h3>Welcome Back</h3>
@@ -38,6 +40,5 @@
     </form>
     
     <script src="../js/loginForm.js"></script>
-
 </body>
 </html>

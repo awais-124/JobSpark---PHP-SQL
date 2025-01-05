@@ -174,7 +174,7 @@ unset($_SESSION['errors']);
     </main>
 
      <!-- Footer Section  - STYLES in ./styles/HomePage/footer.css -->
-    <footer style="background-color: #ddd; color: #000;">
+    <footer style="background-color: #ddd; color: #000; margin-top:auto">
         <!-- 
         INLINE STYLE USED ONLY ONCE IN PROJECT
         TO OVERWRITE MARGIN BOTTOM APPLIED BY BOOTSTRAP 
