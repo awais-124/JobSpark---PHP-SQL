@@ -17,9 +17,9 @@ include '../includes/applicant-header.php';
         <h6>Kickstart your career journey with JobSpark</h6>
         <div class="search-box">
             <form class="search-form">
-                <div class="input-wrapper">
+                <div class="input-wrapper" title="SEARCH IS NOT WORKING CURRENTLY">
                     <img src="../assets/icons/search.png" alt="search-icon" class="search-icon">
-                    <input type="text" placeholder="Search jobs, companies, or keywords" class="search-input">
+                    <input type="text" disabled placeholder="Search jobs, companies, or keywords" class="search-input">
                 </div>
                 <button type="submit" class="search-btn">Search</button>
             </form>
