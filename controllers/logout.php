@@ -1,8 +1,10 @@
 <?php
 
 session_start();
-session_unset();
-session_destroy();
+
+unset($_SESSION['userId']);
+unset($_SESSION['role']);
+unset($_SESSION['user']); 
 
 header('Location: ../Pages/LoginPage.php');
 exit;

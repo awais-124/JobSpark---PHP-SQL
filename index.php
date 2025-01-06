@@ -11,7 +11,7 @@ if (isset($_SESSION['userId'])) {
 
     if ($result && mysqli_num_rows($result) > 0) {
         $userData = mysqli_fetch_assoc($result);
-
+        $_SESSION['role'] = $userData['role'];
         $_SESSION['user'] = $userData;
 
         if ($userData['role'] === 'applicant') {
