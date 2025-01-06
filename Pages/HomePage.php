@@ -49,7 +49,7 @@ $conn->close();
             <h2 class="section-title">Popular Job Categories</h2>
             <div class="categories-grid">
                 <?php foreach ($categories as $category): ?>
-                <a href="JobsListing.php?categoryId=<?php echo $category['id']; ?>" class="category-card">
+                <a href="JobsListing.php?category=<?php echo $category['id']; ?>" class="category-card">
                     <div class="category-info">
                         <div>
                             <div class="category-name"><?php echo htmlspecialchars($category['name']); ?></div>

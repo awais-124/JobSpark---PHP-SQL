@@ -3,7 +3,6 @@ require_once "../includes/helper-functions.php";
 session_start();
 $default = 0;
 $categoryId = isset($_GET['category']) ? intval($_GET['category']) : $default;
-$_SESSION['user'] = '6778eb34de1ee';
 
 if ($categoryId == $default) {
     $jobs = fetchAllJobs();
