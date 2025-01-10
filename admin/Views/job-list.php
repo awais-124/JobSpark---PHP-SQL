@@ -8,14 +8,15 @@ $query = "SELECT jobs.id, jobs.title, jobs.companyName, jobs.location, jobs.stat
           FROM jobs
           INNER JOIN categories ON jobs.category = categories.id";
 $result = $conn->query($query);
-
+$i=0;
 ?>
 <div class="container">
     <h2 class="mt-4">Job List</h2>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>#</th>
+                <th>Id</th>
                 <th>Title</th>
                 <th>Company</th>
                 <th>Location</th>
@@ -27,6 +28,7 @@ $result = $conn->query($query);
         <tbody>
             <?php while ($job = $result->fetch_assoc()): ?>
                 <tr>
+                    <td><?= ++$i; ?></td>
                     <td><?= htmlspecialchars($job['id']) ?></td>
                     <td><?= htmlspecialchars($job['title']) ?></td>
                     <td><?= htmlspecialchars($job['companyName']) ?></td>

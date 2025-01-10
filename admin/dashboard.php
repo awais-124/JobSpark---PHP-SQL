@@ -128,6 +128,12 @@ $name = $_SESSION['admin']['fullname'];
         if (initialSection && contentMap[initialSection]) {
             document.querySelector(`[data-section="${initialSection}"]`).click();
         }
+
+         function hideMe() {
+            const box = document.getElementById('message');
+            box.style.display = 'none';
+            console.log(box.style.display);
+        }
     </script>
 
 

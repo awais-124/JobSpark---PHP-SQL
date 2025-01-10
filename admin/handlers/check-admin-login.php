@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($username) || empty($password)) {
         $_SESSION['error'] = "Both fields are required!";
+        header("Location: ../admin-login.php");
     } else {
         // Check credentials in the database
         $conn = connectDB();
@@ -32,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         } else {
             $_SESSION['error'] = "Invalid username or password!";
+            header("Location: ../admin-login.php");
         }
         $stmt->close();
         $conn->close();

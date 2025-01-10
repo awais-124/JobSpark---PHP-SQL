@@ -8,7 +8,7 @@ if (!isset($_SESSION['user']) || !isset($_GET['jobId'])) {
 }
 
 $jobId = $_GET['jobId'];
-$userId = $_SESSION['user']; 
+$userId = $_SESSION['userId']; 
 $conn = connectDB();
 
 $sql = "SELECT title FROM jobs WHERE id = $jobId";

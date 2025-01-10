@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['deleteUserId'])) {
     $stmt->bind_param('s', $deleteUserId);
 
     if ($stmt->execute()) {
-        header("Location: ../dashboard.php");
+        header("Location: ../dashboard.php?section=applicant-list");
         exit;
     } else {
         $error = "Failed to delete user.";

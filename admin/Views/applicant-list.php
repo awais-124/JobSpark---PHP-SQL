@@ -3,7 +3,6 @@ require_once '../../includes/db-connection.php';
 
 $conn = connectDB();
 
-// Fetch applicants from the database
 $query = "SELECT 
             applicants.id AS applicant_id, 
             users.fullname, 

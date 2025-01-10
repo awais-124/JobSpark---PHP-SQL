@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param('sssssss', $userId, $fullname, $username, $email, $phone, $password, $linkedIn);
 
         if ($stmt->execute()) {
-            header("Location: ../dashboard.php");
+            header("Location: ../dashboard.php?section=add-admin");
             exit;
         } else {
             $errorMessage = "Error adding admin: " . $conn->error;

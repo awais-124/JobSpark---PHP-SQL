@@ -10,10 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['categoryId'])) {
     $stmt->bind_param('i', $categoryId);
 
     if ($stmt->execute()) {
-        header("Location: ../dashboard.php");
+        header("Location: ../dashboard.php?section=category-list");
         exit;
     } else {
-        header("Location: ../dashboard.php");
+        header("Location: ../dashboard.php?section=category-list");
     }
 
     $stmt->close();

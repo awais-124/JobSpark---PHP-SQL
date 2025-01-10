@@ -1,9 +1,12 @@
 <?php
 require_once '../../includes/db-connection.php';
-
+session_start();
 $conn = connectDB();
+$success = "";
+if(isset($_SESSION['success']) && $success!="") {
+    $success = $_SESSION['success'];
+}
 
-// Fetch categories
 function fetchAllCategories($conn) {
     $query = "SELECT id, title, (SELECT COUNT(*) FROM jobs WHERE category = categories.id) AS numberOfJobs FROM categories ORDER BY id DESC";
     $result = $conn->query($query);
@@ -18,6 +21,22 @@ function fetchAllCategories($conn) {
 
 $categories = fetchAllCategories($conn);
 ?>
+
+<div class="mb-4">
+    <?php if ($success != ""):?>
+        <div class="alert alert-success" onclick="hideMe()" id="message">
+            <p class="success"><?php echo $success ?></p>
+        </div>
+    <?php endif;?>    
+        <h5>Add New Category</h5>
+        <form method="POST" action="../../jobSpark/admin/handlers/add-new-category.php">
+            <div class="mb-3">
+                <label for="category" class="form-label">Category Name</label>
+                <input type="text" class="form-control" id="category" name="category" placeholder="Enter category name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add to Categories</button>
+        </form>
+</div>
 
 <div class="container mt-4">
     <h2>Category List</h2>
@@ -53,3 +72,5 @@ $categories = fetchAllCategories($conn);
         </tbody>
     </table>
 </div>
+
+<?php unset($_SESSION['success']); ?>

@@ -1,3 +1,18 @@
+<?php
+    require_once '../includes/db-connection.php';
+
+    $conn = connectDB();
+
+    $query = 'Select * from categories';
+    $result = mysqli_query($conn, $query);
+    $categories = [];
+    if($result) {
+        while($row = mysqli_fetch_assoc($result)) {
+            $categories[] = $row;
+        }
+    }
+?>
+
 <form action="../controllers/post-job.php" method="POST">
     <div class="row">
         <div class="col-md-6 mb-3">
@@ -64,14 +79,9 @@
         <div class="col-md-6 mb-3">
             <label class="form-label">Category</label>
             <select class="form-select" name="category" required>
-                <option value="1">Information Technology</option>
-                <option value="2">Armed Forces</option>
-                <option value="3">Engineering</option>
-                <option value="4">Healthcare</option>
-                <option value="5">Education</option>
-                <option value="6">Sales & Marketing</option>
-                <option value="7">Telecommunications</option>
-                <option value="8">Government</option>
+                <?php foreach ($categories as $cat): ?>
+                        <option value=<?= $cat['id']?> ><?= $cat['title']?></option>
+                <?php endforeach; ?>    
             </select>
         </div>
         <div class="col-md-6 mb-3">

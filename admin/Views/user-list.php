@@ -15,6 +15,8 @@ if ($result && $result->num_rows > 0) {
     }
 }
 
+$i=0;
+
 $conn->close();
 ?>
 
@@ -25,6 +27,7 @@ $conn->close();
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Sr. No.</th>
                         <th>Full Name</th>
                         <th>Username</th>
                         <th>Email</th>
@@ -36,6 +39,7 @@ $conn->close();
                 <tbody>
                     <?php foreach ($users as $user): ?>
                         <tr>
+                            <td><?=++$i;?></td>
                             <td><?= htmlspecialchars($user['fullname']) ?></td>
                             <td><?= htmlspecialchars($user['username']) ?></td>
                             <td><?= htmlspecialchars($user['email']) ?></td>

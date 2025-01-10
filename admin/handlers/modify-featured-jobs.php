@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $stmt = $conn->prepare($deleteQuery);
         $stmt->bind_param('i', $featuredId);
         $stmt->execute();
-        header("Location: ../dashboard.php");
+        header("Location: ../dashboard.php?section=featured-jobs");
         exit;
     } elseif ($_POST['action'] === 'add' && isset($_POST['jobId'])) {
         $jobId = intval($_POST['jobId']);
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         $stmt = $conn->prepare($insertQuery);
         $stmt->bind_param('i', $jobId);
         $stmt->execute();
-        header("Location: ../dashboard.php");
+        header("Location: ../dashboard.php?section=featured-jobs");
         exit;
     }
 }
