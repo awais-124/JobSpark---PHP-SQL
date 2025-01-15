@@ -18,7 +18,7 @@ if (isset($_SESSION['error'])) {
 
 <div class="container">
     <h1>JOBSPARK</h1>
-    <h2>Admin Login</h2>
+    <h2>Admin Dashboard</h2>
     
     <?php if (!empty($errorMessage)): ?>
         <div class="alert"><?= htmlspecialchars($errorMessage) ?></div>
@@ -26,16 +26,16 @@ if (isset($_SESSION['error'])) {
     
     <form method="POST" action="./handlers/check-admin-login.php">
         <div class="form-group">
-            <label for="username" class="form-label">Username</label>
+            <!-- <label for="username" class="form-label">Username</label> -->
             <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
         </div>
         
         <div class="form-group">
-            <label for="password" class="form-label">Password</label>
+            <!-- <label for="password" class="form-label">Password</label> -->
             <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
         </div>
         <button type="submit" class="btn">Login</button>
-        <a href="../Pages/LoginPage.php" class="link">Applicant Login</a>
+        <a href="../Pages/LoginPage.php" class="link">Applicant/Employer Login</a>
     </form>
 </div>
 
