@@ -2,6 +2,43 @@
 
 JobSpark is a PHP and MySQL-based web application designed to connect job seekers and employers in an intuitive and seamless way.
 
+![HOME PAGE]()
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+![Alt Text](relative/path/to/image.png)
+
+---
+
+
 ## **Folder Structure**
 
 The project is organized into the following directories:
@@ -85,3 +122,5 @@ Directory for storing user-uploaded files like resumes, profile pictures, and jo
 1. Clone the repository:
    ```bash
    git clone https://github.com/awais-124/JobSpark---PHP-SQL.git
+2. Create a database named `jobSpark_db` in Xampp
+3. Import db files to create tables and add dummy data from `./db`.
