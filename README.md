@@ -2,39 +2,43 @@
 
 JobSpark is a PHP and MySQL-based web application designed to connect job seekers and employers in an intuitive and seamless way.
 
-![HOME PAGE]()
+![HOME PAGE](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/home.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![JOBS LIST](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/jobs.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![LOGIN](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/login.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![REGISTER](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/register.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![EMPLOYER MODULE](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/employer-main.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![ACTIVE JOBS](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/emp-active-jobs.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![ADMIN](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/admin.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![ADD ADMIN](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/add-admin.jpg)
 
 ---
 
-![Alt Text](relative/path/to/image.png)
+![ADD JOB CATEGORY](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/category-admin.jpg)
+
+---
+
+![ABOUT PAGE](https://github.com/awais-124/JobSpark---PHP-SQL/blob/main/screenshots/about.jpg)
 
 ---
 
